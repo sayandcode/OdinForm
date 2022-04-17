@@ -68,7 +68,7 @@
 }
 
 .highlighted>*{
-    margin-inline: 3rem 8rem;
+    margin-inline: 3rem 15%;
     margin-block: 1.5rem;
 }
 
@@ -94,6 +94,33 @@ label input{
     width: 35ch;
     padding: 0.25em;
     font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #E5E7EB;
+    background-color: hsl(220, 13%, 97%);
+    
+}
+
+label input:focus{
+    transition: box-shadow 0.2s ease-in;
+    outline: none;
+    border: 2px solid rgb(93, 93, 255);
+    box-shadow: 0 0px 15px var(--shadow-color);
+}
+
+label input.error{
+    border: 3px solid red;
+}
+
+label::after{
+    content: "* Passwords do not match";
+    color: red;
+    text-transform: none;
+    font-weight: 100;
+    display: none;
+}
+
+label.error::after{
+    display: inline-block;
 }
 
 button{
